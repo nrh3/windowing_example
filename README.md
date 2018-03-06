@@ -28,14 +28,19 @@ list of eye-numbing timestamps that looked a little like this:
 ``` 
  
  And I wanted to know whether there were any "droughts" in the data -- times when the incoming pings didn't happen for more
- than two hours.   
+ than two hours.   Did the two-day drought in the list above jump out at you?
  
  1_build_ping_table.sql  is used to construct the incoming_pings table -- a bunch of timestamps like those above, with some
  "holes" punched in it.
  
- You can run it as
+ You'll probably have to add arguments to "psql", but you  can run it as
  ```
  psql <  1_build_ping_table.sql 
  ```
  2_find_outages.sql contains the query that produces the answer.
+ 
+ ```
+ psql <  2_find_outages.sql
+ ```
+ 
  
