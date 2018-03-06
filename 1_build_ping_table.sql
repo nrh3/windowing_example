@@ -1,5 +1,10 @@
 -- Illustration of use of window functions arising from Real Life by Nat Howard for Stephen Frost  3/6/18.
 
+-- for reproducible results -- we set the random seed
+
+set seed to 0.5;
+
+
 drop table if exists incoming_pings;
 
 create table incoming_pings (
@@ -29,5 +34,6 @@ with recursive t (ts) as (
   from t cross join base
   where ts < max
 )
-select ts into incoming_pings
+insert into incoming_pings 
+select ts 
 from t;
