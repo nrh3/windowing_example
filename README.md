@@ -1,7 +1,7 @@
 # Postgresql Windowing Example
 A postgresql windowing example using lag().
 
-This example is meant to show one of those situations where windowing functions -- in this case, one of the simplest -- is
+This example is meant to show one of those situations where windowing functions -- in this case, one of the simplest -- are
 just what you need.   I contrived the example, which is based on a real need, after watching Stephen Frost of Crunchydata
 give a talk about advanced SQL at a Postgresql Meetup.
 
