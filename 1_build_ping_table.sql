@@ -39,14 +39,12 @@ select ts
 from t;
 
 -- You might want to keep this part secret from the audience
--- Now the ping table is loaded, simulate a bunch of data failures by a couple of random things
+-- Now the ping table is loaded, simulate a bunch of data "droughts" by a couple of random things
 -- For example, just six months ago, we had a two-day outage:
 delete from incoming_pings where when_pung between '2018-03-06 21:54:12.857133+00'::timestamptz - '6 months 2 days'::interval and '2018-03-06 21:54:12.857133+00'::timestamptz - '6 months'::interval;
 
 -- And then, because of a peculiar habit of a lab technician we hired a month ago (he prefers to use all the internet bandwidth  between 
 -- 8pm and midnight on thursdays) we are also experiencing outages then.
-
--- select * from incoming_pings where extract(dow from when_pung) = 4 and extract(hour from when_pung) is between 20 and 23 and when_pung > '2018-03-06 21:54:12.857133+00'::timestamptz - '1 month'::interval ;
 
 delete   from incoming_pings where extract(dow from when_pung) = 4 and extract(hour from when_pung)  between 20 and 23 and when_pung > '2018-03-06 21:54:12.857133+00'::timestamptz - '1 month'::interval ;
 
