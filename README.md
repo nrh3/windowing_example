@@ -43,5 +43,5 @@ list of eye-numbing timestamps that looked a little like this:
  ```
  psql <  2_find_outages.sql
  ```
- 
+ These examples were done using PostgreSQL 10.1 on Amazon RDS.
  
