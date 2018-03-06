@@ -1,4 +1,4 @@
--- Illustration of use of postgresql window functions arising from Real Life by Nat Howard 
+-- Illustration of use of postgresql window functions arising from Real Life by Nat Howard as an example for Stephen Frost.
 
 -- for reproducible results -- we set the random seed, and instead of "now()" we'll use '2018-03-06 21:54:12.857133+00'::timestamptz
 
