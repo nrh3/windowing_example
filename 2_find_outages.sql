@@ -19,7 +19,7 @@
 
 
 
--- The final answer, which is a select-within-a-select to as to conveniently relabel things and 
+-- The final answer, which is a select-within-a-select so as to conveniently relabel things and 
 -- avoid having to refer to a window function item within a where clause is this:
 
 select when_pung - time_since_last_ping as when_drought_began, 
